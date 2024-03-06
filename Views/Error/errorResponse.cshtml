@@ -1,0 +1,13 @@
+﻿@page "/error/{ErrCode:string}"
+@using RainFall.Views.Error;
+@model errorResponseModel
+@{
+    errorResponseModel errmodel = new errorResponseModel();
+    errmodel.ErrCode = ViewBag.ErrorCode;
+    errmodel.ErrDesc = ViewBag.ErrorDescription;
+
+}
+
+<h1>@errmodel.ErrCode</h1>
+
+<h2>@errmodel.ErrDesc</h2>

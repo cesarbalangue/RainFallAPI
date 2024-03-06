@@ -1,0 +1,11 @@
+﻿Happy Paths - Correct Station ID
+1. user locate /Rainfall/id/{stationId}/readings in the swagger UI
+2. enter "3680" as stationId
+3. click "execute" button
+4. The user will see then a response with 10 items or less
+
+Unhappy Paths - Wrong Station ID, No Station ID
+1. user locate /Rainfall/id/{stationId}/readings in the swagger UI
+2. enter "AAAA" as stationId (Note: since the station Id is required, it will not accept if it is blank);
+3. click "execute" button
+4. the user will see then a reponse with code: 404 error sayaing "No readings found for the specified stationId"
